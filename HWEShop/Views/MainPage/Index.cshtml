@@ -1,0 +1,124 @@
+﻿
+@model IEnumerable<HWEShop.Models.EntityFramework.Categories>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img class="d-block w-100" src="https://akstatic.lcwaikiki.com/Resource/Images/Banner/20201009-50off.jpg" alt="First slide">
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100" src="https://akstatic.lcwaikiki.com/Resource/Images/Banner/20201022-xside.jpg" alt="Second slide">
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100" src="https://lmb-adl.akinoncdn.com/cms/2020/10/15/fb20a90f-4063-4b7f-a450-db4d4ad2c2fe.jpg" alt="Third slide">
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+
+
+<br />
+
+<div class="row">
+    <div class="col-sm-6 mb30">
+        <div class="lcwbanner text-center" data-tracking-bannercategory="gridbanner">
+            <div class="bannerimage">
+                <a href="/Categories/Details/2" tabindex="25">
+                    <picture>
+                        <source media="(min-width: 768px)" srcset="https://akstatic.lcwaikiki.com/Resource/Images/Banner/20201026-vision.jpg">
+                        <source media="(max-width: 767px)" srcset="https://akstatic.lcwaikiki.com/Resource/Images/Banner/20201026-vision.jpg">
+                        <img alt="" class="img-responsive" data-original="https://akstatic.lcwaikiki.com/Resource/Images/Banner/20201026-acc.jpg"
+                             src="https://akstatic.lcwaikiki.com/Resource/Images/Banner/loader.gif">
+                    </picture>
+                </a>
+            </div>
+
+            <div class="bigbannercontent2 text-center">
+                <h2>HW Women Collection</h2>
+                <a class="btn btn-danger button" href="/Categories/Details/2" tabindex="26">WOMEN&nbsp;</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6 mb30">
+        <div class="lcwbanner text-center" data-tracking-bannercategory="gridbanner">
+            <div class="bannerimage">
+                <a href="/Categories/Details/1" tabindex="27">
+                    <picture>
+                        <source media="(min-width: 768px)" srcset="https://akstatic.lcwaikiki.com/Resource/Images/Banner/20201026-casual.jpg">
+                        <source media="(max-width: 767px)" srcset="https://akstatic.lcwaikiki.com/Resource/Images/Banner/20201026-casual.jpg">
+                        <img alt="" class="img-responsive" data-original="https://akstatic.lcwaikiki.com/Resource/Images/Banner/20201026-home.jpg" src="https://akstatic.lcwaikiki.com/Resource/Images/Banner/loader.gif">
+                    </picture>
+                </a>
+            </div>
+
+            <div class="bigbannercontent2 text-center">
+                <h2>HW Men Collection</h2>
+                <a class="btn btn-danger button" href="/Categories/Details/1" tabindex="28">MEN&nbsp;</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br />
+
+<div class="row">
+    <div class="col-sm-6 mb30">
+        <div class="lcwbanner text-center" data-tracking-bannercategory="gridbanner">
+            <div class="bannerimage">
+                <a href="/Categories/Details/3" tabindex="25">
+                    <picture>
+                        <source media="(min-width: 768px)" srcset="https://akstatic.lcwaikiki.com/Resource/Images/Banner/20201026-acc.jpg">
+                        <source media="(max-width: 767px)" srcset="https://akstatic.lcwaikiki.com/Resource/Images/Banner/20201026-acc.jpg">
+                        <img alt="" class="img-responsive" data-original="https://akstatic.lcwaikiki.com/Resource/Images/Banner/20201026-acc.jpg"
+                             src="https://akstatic.lcwaikiki.com/Resource/Images/Banner/loader.gif">
+                    </picture>
+                </a>
+            </div>
+
+            <div class="bigbannercontent2 text-center">
+                <h2>HW Shoes Collection</h2>
+                <a class="btn btn-danger button" href="/Categories/Details/3" tabindex="26">SHOES&nbsp;</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6 mb30">
+        <div class="lcwbanner text-center" data-tracking-bannercategory="gridbanner">
+            <div class="bannerimage">
+                <a href="/Categories/Details/4" tabindex="27">
+                    <picture>
+                        <source media="(min-width: 768px)" srcset="https://akstatic.lcwaikiki.com/Resource/Images/Banner/20201026-home.jpg">
+                        <source media="(max-width: 767px)" srcset="https://akstatic.lcwaikiki.com/Resource/Images/Banner/20201026-home.jpg">
+                        <img alt="" class="img-responsive" data-original="https://akstatic.lcwaikiki.com/Resource/Images/Banner/20201026-home.jpg"
+                             src="https://akstatic.lcwaikiki.com/Resource/Images/Banner/loader.gif">
+                    </picture>
+                </a>
+            </div>
+
+            <div class="bigbannercontent2 text-center">
+                <h2>HW Home Collection</h2>
+                <a class="btn btn-danger button" href="/Categories/Details/4" tabindex="28">HOME&nbsp;</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+

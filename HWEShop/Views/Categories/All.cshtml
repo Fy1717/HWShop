@@ -1,0 +1,52 @@
+﻿@model IEnumerable<HWEShop.Models.EntityFramework.Products>
+
+@{
+    ViewBag.Title = "All";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 style="font-family: Comic Sans MS; margin-left: 40%;">ALL CATEGORIES</h2>
+<br />
+<br />
+<br />
+<div class="card-deck">
+
+    @foreach (var item in Model)
+    {
+        <div class="card" style="width: 50rem;">
+            <img class="bd-placeholder-img card-img-top" width="100" height="370" src="@item.ProductImage" />
+
+            <div class="card-body">
+                <h5 class="card-title">@Html.DisplayFor(modelItem => item.ProductName)</h5>
+                <p class="card-text">Quick sample text to create the card title and make up the body of the card's content.</p>
+
+                <hr />
+
+                <p>
+                    @if (item.ProductStock > 0)
+                    {
+                        <strong style="margin-left: 40%;"> PRICE: @item.ProductPrice £</strong>
+                    }
+                    else
+                    {
+                        <strong style="color:red; margin-left: 32%;"> OUT OF STOCK</strong>
+                    }
+                </p>
+
+                @if (item.ProductStock > 0)
+                {
+                    <select name="Quantity" style="margin-left: 10%;">
+                        <option value="1" selected>1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+
+                    <a href="#" class="btn btn-primary" style=" margin-left: 8%;">ADD TO CART</a>
+                }
+
+                </div>
+        </div>
+    }
+</div>
+
