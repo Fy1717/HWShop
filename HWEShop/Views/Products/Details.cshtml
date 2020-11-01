@@ -5,87 +5,44 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Details</h2>
 
-<div>
-    <h4>Products</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.ProductName)
-        </dt>
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb lighten-4" >
+        <li class="breadcrumb-item" style="margin-left: 5%"><a style="color: black" href="/">HOME</a></li>
+        <li class="breadcrumb-item"><a style="color: black">@Model.Categories.CategoryName</a></li>
+        <li class="breadcrumb-item">@Model.ProductName</li>
+    </ol>
+</nav>
 
-        <dd>
-            @Html.DisplayFor(model => model.ProductName)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.ProductStock)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ProductStock)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.ProductCost)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ProductCost)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.ProductPrice)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ProductPrice)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.ProductSeller)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ProductSeller)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.ProductImage)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ProductImage)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Status)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Status)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Categories.CategoryName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Categories.CategoryName)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Users.UserName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Users.UserName)
-        </dd>
-
-    </dl>
+<div class="col-5" style="float:left; width: 45%; height:500px; margin-left: 5%">
+    <img style="margin-left: 15%" class="bd-placeholder-img" width="400" height="500" src="@Model.ProductImage" />
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ProductId }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+
+<div style="float:left; width: 45%; height:500px;">
+    <h3 style="text-align: center; margin-top:10%; font-family: Comic Sans MS;"><b>@Model.ProductName</b></h3>
+    <hr />
+    <p style="width: 70%; margin: auto" class="card-text">Quick sample text to create the card title and make up quick sample text to create the card title create the card title and make up the body of the card's content. rd's content. Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual.</p>
+    <hr />
+    <p style="text-align:center"><strong>SELLER COMPANY:  @Model.ProductSeller </strong></p>
+
+    <h4>
+        <strong style="margin-left: 45%; text-align: center;"> @Model.ProductPrice £</strong>
+    </h4>
+
+    <br />
+
+    @if (Model.ProductStock > 0)
+    {
+        <button class="btn btn-primary" style="margin-left: 40%" href="/CartPage">
+            ADD TO CART
+        </button>
+    }
+    else
+    {
+        <button class="btn btn-danger" style="margin-left: 40%" href="#">
+            OUT OF STOCK
+        </button>
+    }
+</div>
+
+
